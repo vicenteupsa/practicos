@@ -1,0 +1,44 @@
+/*3.  Calcular la nota final de un estudiante universitario, sabiendo que rindió:
+•	2 exámenes parciales ponderados con 25 puntos cada uno.
+•	1 examen final de 30 puntos.
+•	1 proyecto integrador de 20 puntos.
+La nota final es la suma de los cuatro componentes. Indicar si el estudiante APROBÓ (≥ 51) o REPROBÓ (< 51).
+*/
+
+#include <iostream>
+using namespace std;
+
+int main(){
+    
+    double parcial1, parcial2, final, proyecto, notafinal ;
+    
+    cout << "calculo de nota final" << endl ;
+    
+    cout << "Ingrese su nota del 1er parcial: " << endl;
+    cin >> parcial1 ;
+    
+    cout << "Ingrese su nota del 2do parcial: " << endl;
+    cin >> parcial2 ;
+    
+    cout << "Ingrese su nota del examen final : " << endl;
+    cin >> final ;
+    
+    cout << "Ingrese su nota del proyecto: " << endl;
+    cin >> proyecto ;
+    
+    notafinal = (parcial2*0.25) + (parcial1*0.25) + (final*0.3) + (proyecto*0.20) ;
+    
+    cout << "Su nota es: " << notafinal << endl ;
+    
+    if(notafinal>=51){
+        
+        cout << "Usted APROBÓ " << endl;
+    }
+    
+    else {
+        cout << "Usted REPROBÓ " << endl;
+        }
+
+return 0;    
+    
+}
