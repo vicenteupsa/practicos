@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+/*
+Calcular el área de la superficie y el volumen de un cilindro, conociendo como dato su radio R y su altura H.
+Fórmulas de referencia:
+Área lateral = 2 × π × R × H
+Área total   = 2 × π × R × (R + H)
+Volumen      = π × R² × H */
+
+int main(){
+    
+    double radio, altura, arealateral, areatotal, volumen;
+    
+    cout  << "Calculador del área de superficie y volumen de un cilindro: " << endl;
+    
+    cout << "Ingrese la altura del cilindro: ";
+    cin  >> altura ;
+    
+    cout << "Ingrese el radio del cilindro: ";
+    cin  >> radio ;
+    
+    arealateral = 2*M_PI * radio * altura ;
+    areatotal = 2 * M_PI * radio * (radio + altura) ;
+    volumen = (M_PI * radio * radio * altura) ;
+    
+    cout << "el areatotal es: " << areatotal << endl ;
+    cout << "el arealateral es: " << arealateral << endl ;
+    cout << "el volumen es: " << volumen << endl ;
+
+return 0 ;
+    
+}
