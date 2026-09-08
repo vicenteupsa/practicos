@@ -1,0 +1,32 @@
+/*6.  Construir un programa que convierta una temperatura dada en grados Celsius a Fahrenheit, Kelvin y Rankine.
+Fórmulas:
+F = (C × 9/5) + 32
+K = C + 273.15
+Ra = (C + 273.15) × 9/5
+Ejemplo: Si C = 25  →  F = 77.00,  K = 298.15,  Ra = 536.67
+*/
+
+#include <iostream> 
+
+using namespace std;
+
+int main(){
+    
+    double C, F, K, R;
+    
+    cout <<"Ingrese la temperatura en Celsius: "<< endl;
+    cin >> C ;
+    
+    F = (C*9/5) + 32;
+    K = C + 273.15;
+    R = (C + 273.15) * 9/5;
+    
+    cout << "Si C: " << C << endl;
+    cout << "F: " << F <<endl;
+    cout << "K: " << K << endl;
+    cout << "R: " << R << endl;
+    
+    return 0;
+
+    
+}
