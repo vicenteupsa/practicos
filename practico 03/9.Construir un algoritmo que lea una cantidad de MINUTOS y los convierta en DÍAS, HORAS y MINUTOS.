@@ -1,0 +1,31 @@
+/*9.  Construir un algoritmo que lea una cantidad de MINUTOS y los convierta en DÍAS, HORAS y MINUTOS.
+Ejemplo:  4580 minutos  →  3 días, 4 horas, 20 minutos*/
+
+#include <iostream> 
+
+using namespace std;
+
+int main(){
+    
+    int total, dias, horas, min, sobra;
+    
+    cout << "Ingrese total de minutos: "<< endl;
+    cin >> total ;
+    
+    dias = total/1440 ;
+    
+    sobra = total%1440 ;
+    
+    horas = sobra/60 ;
+    
+    min = sobra%60 ;
+    
+    cout << "El total resulta en : "<< endl;
+    cout << dias << " dias" << endl ;
+    cout << horas << " horas" << endl ;
+    cout << min << " minutos" << endl ;
+    
+    return 0;
+    
+    
+}
