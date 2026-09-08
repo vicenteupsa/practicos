@@ -1,0 +1,39 @@
+/*8.  Calcule la solución de un sistema de dos ecuaciones con 2 variables de la forma:
+Ax + By = C 
+Dx + Ey = F 
+
+El algoritmo debe leer como entrada los 6 coeficientes de la ecuación, y dar como salida 
+la solución X, Y, considerando todos los tipos de solución posibles para todos los valores. 
+*/
+
+#include <iostream>
+
+int main(){
+    
+    double A, B, C, D, E, F, x, y;
+    
+    cout <<"Ingrese A: " << endl;
+    cin >> A;
+    
+    cout <<"Ingrese B: " << endl;
+    cin >> B;
+    
+    cout <<"Ingrese C: " << endl;
+    cin >> C;
+    
+    cout <<"Ingrese D: " << endl;
+    cin >> D;
+    
+    cout <<"Ingrese E: " << endl;
+    cin >> E;
+    
+    cout <<"Ingrese F: " << endl;
+    cin >> F;
+    
+x = ;
+y = ;
+
+return 0;
+  
+    
+}
