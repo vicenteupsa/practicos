@@ -1,0 +1,42 @@
+/*5.  Calcular el monto total que pagará una persona por un crédito de consumo,
+conociendo el capital prestado C, la tasa de interés mensual T y el número de cuotas N.
+Cuota mensual = C × (T × (1 + T)^N) / ((1 + T)^N − 1)
+Monto total   = Cuota × N
+Interés total = Monto total − C
+*/
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main(){
+    
+    double capital, interes, cuotas, cuotamensual, montototal, interestotal;
+    
+    cout << "Calculadora de credito de consumo" <<endl;
+    
+    cout << "Ingrese el capital prestado: " ;
+    cin >> capital ;
+    
+    cout << "Ingrese el interes mensual: " ;
+    cin >> interes;
+    
+    cout << "Ingrese el numero de cuotas: " ;
+    cin >> cuotas;
+    
+    cuotamensual = capital * (interes*pow(1+interes,cuotas))/(pow(1+interes,cuotas)-1);
+    
+    montototal = cuotamensual*cuotas;
+    
+    interestotal = montototal - capital;
+    
+    cout << "su cuotamensual es: " << cuotamensual <<endl;
+    cout << "su monto total a pagar es: " << montototal << endl;
+    cout << "su interestotal es: " << interestotal <<endl ;
+    
+    return 0;
+    
+    
+    
+}
