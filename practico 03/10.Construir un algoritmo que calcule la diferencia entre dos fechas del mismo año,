@@ -1,0 +1,38 @@
+/*10.  Construir un algoritmo que calcule la diferencia entre dos fechas del mismo año,
+expresando el resultado en meses y días. El ingreso debe ser: DD MM (día y mes) para 
+cada fecha. Asumir meses de 30 días para simplificar el cálculo.
+Ejemplo:
+  Fecha inicial:  05  03   (5 de marzo)
+  Fecha final:   28  08   (28 de agosto)
+  Diferencia:     5 meses  23 días
+Nota: Use los conceptos del ejercicio anterior (conversión de unidades de tiempo).
+*/
+
+#include <iostream> 
+
+using namespace std;
+
+int main() {
+    
+    int dia1, mes1, dia2, mes2, diferenciadias, dias1total, dias2total;
+    int sobradias, mesestotal;
+    
+    cout << "Ingrese primera fecha (DD MM): "<< endl;
+    cin >> dia1 >> mes1;
+    
+    cout << "Ingrese segunda fecha (DD MM): "<< endl;
+    cin >> dia2 >> mes2;
+    
+    dias1total = (mes1*30) + dia1;
+    dias2total = (mes2*30) + dia2;
+    
+    diferenciadias = dias2total - dias1total ;
+    
+    mesestotal = diferenciadias/30;
+    
+    sobradias = diferenciadias%30;
+    
+    cout << "la diferencia total es: " << mesestotal << " meses" << sobradias << " dias";
+    
+    return 0;
+}
