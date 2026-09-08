@@ -1,0 +1,34 @@
+/*7.  Calcular el monto acumulado M de una inversión con capitalización mensual,
+dado un capital inicial C, una tasa de interés anual T (en %) y un plazo de N años.
+Fórmula: M = C × (1 + T/12/100)^(N×12)
+Mostrar también la ganancia neta: G = M − C
+*/
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main(){
+    
+    double C, T, N, M, G;
+    
+    cout <<"Ingrese su capital inicial: " << endl;
+    cin >> C ;
+    
+    cout <<"Ingrese su taas de interes anual: " << endl;
+    cin >> T ;
+    
+    cout <<"Ingrese su plazo de N años: " << endl;
+    cin >> N ;
+    
+    M = C * pow(1+T/12/100,N*12);
+    
+    G = M*C;
+    
+    cout <<"Monto acumulado: " << M << endl;
+    cout <<"Ganancia neta: " << G << endl;
+    
+    return 0;
+    
+}
