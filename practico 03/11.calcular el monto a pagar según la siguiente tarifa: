@@ -1,0 +1,57 @@
+/*11.  Dado el consumo mensual de energía eléctrica en kWh de un hogar boliviano,
+calcular el monto a pagar según la siguiente tarifa:
+
+Condición	Valor	Resultado
+0 < kWh ≤ 100	Bs 0.30/kWh	Categoría básica
+100 < kWh ≤ 300	Bs 0.50/kWh	Categoría media
+300 < kWh ≤ 600	Bs 0.75/kWh	Categoría alta
+kWh > 600	Bs 1.10/kWh	Categoría industrial
+
+Agregar un cargo fijo de Bs 8.00 por servicio. Si el consumo es 0, mostrar el mensaje 'SIN CONSUMO REGISTRADO'.*/
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    
+    double consumomensual, total, tarifa;
+    
+    cout << "Ingrese su consumo: " << endl;
+    cin >> consumomensual ;
+    
+    
+    if (consumomensual>0 && consumomensual<=100){
+        tarifa = 0.3 ;
+        cout << "Categoria Basica";
+    }
+    else if (consumomensual>100 && consumomensual<=300){
+        tarifa = 0.5 ;
+        cout << "Categoria Media";
+    }
+    else if (consumomensual>300 && consumomensual<=600){
+        tarifa = 0.75 ;
+        cout << "Categoria Alta";
+    }
+    else if (consumomensual>600){
+        tarifa = 1.1 ;
+        cout << "Categoria Industrial";
+    }
+    else if (consumomensual==0){
+        cout << "Sin Consumo Registrado";
+        
+        return 1;
+        }
+    else {
+        cout << "El consumo debe ser positivo";
+        return 2;
+    }
+    
+    
+    total = 8 + (consumomensual * tarifa);
+    
+    cout << endl << "Monto a Pagar:" <<total;
+    
+
+    return 0;
+}    
