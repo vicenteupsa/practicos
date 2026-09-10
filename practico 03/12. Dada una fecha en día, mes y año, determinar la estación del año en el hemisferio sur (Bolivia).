@@ -1,0 +1,35 @@
+/*12.  Dada una fecha en día, mes y año, determinar la estación del año en el hemisferio sur (Bolivia).
+Las estaciones en el hemisferio sur comienzan en:
+• Otoño:     21 de marzo
+• Invierno:  21 de junio
+• Primavera: 21 de septiembre
+• Verano:    21 de diciembre
+*/
+#include <iostream>
+
+using namespace std ;
+
+int main(){
+    
+    int dia, mes, year, diaacumulado;
+    
+    cout << "Ingrese fecha ( DD MM AAAA )" ;
+    cin >> dia >> mes >> year ;
+    
+    diaacumulado = (mes*30)+ dia ;
+    
+    if(diaacumulado>(20+(3*30))&&diaacumulado<(21+(6*30))){
+        cout<<"Estamos en Otoño";
+    }
+    else if(diaacumulado>(20+(6*30))&&diaacumulado<(21+(9*30))){
+        cout<< "Estamos en Invierno";
+    }
+    else if(diaacumulado>(20+(9*30))&&diaacumulado<(21+(12*30))){
+        
+        cout << "Estamos en Primavera";
+    }
+    else{
+        cout<< "Estamos en verano";
+    }
+return 0;    
+}
