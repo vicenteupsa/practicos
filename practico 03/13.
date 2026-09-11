@@ -1,0 +1,54 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    double a, b, c, discriminante, x1, x2;
+
+    cout << "Ingrese a, b y c separados por espacios: ";
+    cin >> a >> b >> c;
+
+    // Caso 1 y 2: Cuando a = 0, ya no es una parábola
+    if (a == 0) {
+        if (b == 0) {
+            // Si c también es 0, es 0=0 (Identidad). Si c no es 0, es absurdo (ej. 5=0).
+            cout << "Ecuacion degenerada. ";
+            if (c == 0) cout << "(Identidad: infinitas soluciones reales)\n";
+            else cout << "(Sin solucion logica)\n";
+        } else {
+            // Al ser 'a' cero pero 'b' tener valor, es una recta lineal (bx + c = 0)
+            x1 = -c / b;
+            cout << "Es una ecuacion lineal. Tiene una sola solucion:\n";
+            cout << "x = " << x1 << "\n";
+        }
+    } 
+    // Caso 3, 4 y 5: Es una ecuación cuadrática real (a != 0)
+    else {
+        discriminante = (b * b) - (4 * a * c);
+
+        if (discriminante > 0) {
+            x1 = (-b + sqrt(discriminante)) / (2 * a);
+            x2 = (-b - sqrt(discriminante)) / (2 * a);
+            cout << "El discriminante es > 0. Dos raices reales distintas:\n";
+            cout << "x1 = " << x1 << "\n";
+            cout << "x2 = " << x2 << "\n";
+        } 
+        else if (discriminante == 0) {
+            x1 = -b / (2 * a);
+            cout << "El discriminante es = 0. Una raiz real doble:\n";
+            cout << "x1 y x2 = " << x1 << "\n";
+        } 
+        else {
+            double parteReal = -b / (2 * a);
+            // Convertimos el discriminante a positivo para poder sacar la raíz
+            double parteImaginaria = sqrt(-discriminante) / (2 * a);
+            
+            cout << "El discriminante es < 0. Raices complejas conjugadas:\n";
+            cout << "x1 = " << parteReal << " + " << parteImaginaria << "i\n";
+            cout << "x2 = " << parteReal << " - " << parteImaginaria << "i\n";
+        }
+    }
+
+    return 0;
+}
