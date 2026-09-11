@@ -1,0 +1,70 @@
+/*14.  El siguiente es el menú de una salteñería local. Diseñar un programa para calcular el total de la compra.
+
+ÍTEM	PRECIO (Bs)	CANTIDAD	TOTAL PARCIAL
+Salteña de pollo	3.50	xxxx	xxxxx.xx
+Salteña de carne	4.00	xxxx	xxxxx.xx
+Empanada de queso	3.00	xxxx	xxxxx.xx
+Refresco (500ml)	5.00	xxxx	xxxxx.xx
+Agua mineral	3.00	xxxx	xxxxx.xx
+TOTAL		xxxx	xxxxx.xx
+
+El programa debe leer la cantidad de cada ítem, calcular el subtotal por ítem y mostrar el total general a pagar.
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+    const double PRECIO_POLLO = 3.50;
+    const double PRECIO_CARNE = 4.00;
+    const double PRECIO_QUESO = 3.00;
+    const double PRECIO_REFRESCO = 5.00;
+    const double PRECIO_AGUA = 3.00;
+
+    int cant_pollo = 0, cant_carne = 0, cant_queso = 0, cant_refresco = 0, cant_agua = 0;
+    int total_cantidad;
+
+    double parcial_pollo, parcial_carne, parcial_queso, parcial_refresco, parcial_agua;
+    double total_pagar;
+
+    cout << "--- SISTEMA DE VENTAS: SALTENERIA ---\n\n";
+
+    cout << "Ingrese cantidad de Saltenas de pollo: ";
+    cin >> cant_pollo;
+    
+    cout << "Ingrese cantidad de Saltenas de carne: ";
+    cin >> cant_carne;
+    
+    cout << "Ingrese cantidad de Empanadas de queso: ";
+    cin >> cant_queso;
+    
+    cout << "Ingrese cantidad de Refresco (500ml): ";
+    cin >> cant_refresco;
+    
+    cout << "Ingrese cantidad de Agua mineral: ";
+    cin >> cant_agua;
+
+    parcial_pollo = cant_pollo * PRECIO_POLLO;
+    parcial_carne = cant_carne * PRECIO_CARNE;
+    parcial_queso = cant_queso * PRECIO_QUESO;
+    parcial_refresco = cant_refresco * PRECIO_REFRESCO;
+    parcial_agua = cant_agua * PRECIO_AGUA;
+
+    total_cantidad = cant_pollo + cant_carne + cant_queso + cant_refresco + cant_agua;
+    total_pagar = parcial_pollo + parcial_carne + parcial_queso + parcial_refresco + parcial_agua;
+
+    cout << "\n----------------------------------------------------\n";
+    cout << "ITEM\t\t\tCANTIDAD\tTOTAL PARCIAL\n";
+    cout << "----------------------------------------------------\n";
+    cout << "Saltena de pollo\t" << cant_pollo << "\t\t" << parcial_pollo << " Bs\n";
+    cout << "Saltena de carne\t" << cant_carne << "\t\t" << parcial_carne << " Bs\n";
+    cout << "Empanada de queso\t" << cant_queso << "\t\t" << parcial_queso << " Bs\n";
+    cout << "Refresco (500ml)\t" << cant_refresco << "\t\t" << parcial_refresco << " Bs\n";
+    cout << "Agua mineral\t\t" << cant_agua << "\t\t" << parcial_agua << " Bs\n";
+    cout << "----------------------------------------------------\n";
+    cout << "TOTAL\t\t\t" << total_cantidad << "\t\t" << total_pagar << " Bs\n";
+
+    return 0;
+}
