@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int transacciones;
+    int acumulado = 0;
+    int mayores_a_5 = 0;
+    
+    cout << "Ingrese las transacciones: ";
+    cin >> transacciones;
+    
+    if (transacciones < 0) {
+        transacciones = -transacciones;
+    }
+    
+    while (transacciones > 0) {
+        int movimiento = transacciones % 10;
+        acumulado += movimiento;
+        
+        if (movimiento > 5) {
+            mayores_a_5++;
+        }
+        
+        transacciones /= 10;
+    }
+    
+    cout << "Total acumulado: " << acumulado << endl;
+    cout << "Transacciones mayores a 5: " << mayores_a_5 << endl;
+    
+    return 0;
+}
