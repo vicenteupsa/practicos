@@ -1,0 +1,25 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int numero, original, invertido = 0;
+    
+    cout << "Ingrese un numero: ";
+    cin >> numero;
+    
+    original = numero;
+    
+    while (numero > 0) {
+        invertido = invertido * 10 + (numero % 10);
+        numero /= 10;
+    }
+    
+    if (original == invertido) {
+        cout << "Es capicua" << endl;
+    } else {
+        cout << "No es capicua" << endl;
+    }
+    
+    return 0;
+}
