@@ -1,0 +1,33 @@
+6. Validación en base 8
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int numero;
+    bool valido = true;
+    
+    cout << "Ingrese un numero: ";
+    cin >> numero;
+    
+    if (numero < 0) {
+        numero = -numero;
+    }
+    
+    while (numero > 0) {
+        if (numero % 10 >= 8) {
+            valido = false;
+            break;
+        }
+        numero /= 10;
+    }
+    
+    if (valido) {
+        cout << "Es valido" << endl;
+    } else {
+        cout << "Es invalido" << endl;
+    }
+    
+    return 0;
+}
