@@ -1,0 +1,29 @@
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int numero, pares = 0;
+    
+    cout << "Ingrese un numero: ";
+    cin >> numero;
+    
+    if (numero < 0) {
+        numero = -numero;
+    }
+    
+    if (numero == 0) {
+        pares = 1;
+    }
+    
+    while (numero > 0) {
+        if ((numero % 10) % 2 == 0) {
+            pares++;
+        }
+        numero /= 10;
+    }
+    
+    cout << "Resultado: " << pares << endl;
+    
+    return 0;
+}
