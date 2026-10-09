@@ -1,0 +1,39 @@
+8. Seguridad de código
+Un sistema evalúa la fortaleza de un código numérico en base a ciertas condiciones. El programa debe verificar si tiene al menos dos dígitos pares y si la suma de sus dígitos supera un valor. Por ejemplo, el número 4826 tiene varios pares y su suma es 20, por lo que sería considerado seguro.
+#include <iostream>
+
+using namespace std;
+
+int main() {
+    int numero, umbral;
+    int pares = 0, suma = 0;
+    
+    cout << "Ingrese el codigo numerico: ";
+    cin >> numero;
+    
+    cout << "Ingrese el valor a superar para la suma de digitos: ";
+    cin >> umbral;
+    
+    if (numero < 0) {
+        numero = -numero;
+    }
+    
+    while (numero > 0) {
+        int digito = numero % 10;
+        suma += digito;
+        
+        if (digito % 2 == 0) {
+            pares++;
+        }
+        
+        numero /= 10;
+    }
+    
+    if (pares >= 2 && suma > umbral) {
+        cout << "Codigo seguro" << endl;
+    } else {
+        cout << "Codigo no seguro" << endl;
+    }
+    
+    return 0;
+}
